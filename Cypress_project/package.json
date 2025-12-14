@@ -1,0 +1,31 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "Proyecto de Cypress",
+  "keywords": [
+    "e2e",
+    "cypress",
+    "testing",
+    "framework",
+    "automation"
+  ],
+  "homepage": "https://github.com/jormarsikiu/cypress_jt#readme",
+  "bugs": {
+    "url": "https://github.com/jormarsikiu/cypress_jt/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jormarsikiu/cypress_jt.git"
+  },
+  "license": "ISC",
+  "author": "Jormar Turizo",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^15.7.1"
+  }
+}
