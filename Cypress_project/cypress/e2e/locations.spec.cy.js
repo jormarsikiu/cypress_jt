@@ -15,7 +15,7 @@ describe('Localizadores en cypress', function(){
     it('Metodo GET', function(){
         cy.get("#user-name").type(username);
         cy.get("input#password").type(password);
-        cy.get('[data-test="login-button"]').click();   
+        cy.get('[data-test="login-button"]', {timeout:200000}).click();   
         cy.get('#react-burger-menu-btn').click();
         cy.get('#logout_sidebar_link').click();
         

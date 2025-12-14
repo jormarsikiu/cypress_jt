@@ -42,6 +42,13 @@ Ejemplo:
     "cy:open": "cypress open"
   }, 
 
-Guardar el archivo                                                                     
+Guardar el archivo
 
-2- Ejecutar npm run cy:open
+################ FIN CONFIGURACION #################
+
+
+################ EJECUTAR #################
+
+1- Ejecutar npm run cy:open
+
+2- Ejecutar en navrgador headless: npm run cypress:runChromeHeadless
