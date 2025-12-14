@@ -5,14 +5,14 @@ let username = "standard_user";
 let password = "secret_sauce";
 
 
-describe('Locations in cypress', function(){
+describe('Localizadores en cypress', function(){
 
    beforeEach(function(){
     cy.visit('https://www.saucedemo.com/');
    })
 
     ///Busqueda de elementos por ID or data=test
-    it('GET method', function(){
+    it('Metodo GET', function(){
         cy.get("#user-name").type(username);
         cy.get("input#password").type(password);
         cy.get('[data-test="login-button"]').click();   
@@ -22,7 +22,7 @@ describe('Locations in cypress', function(){
     });
 
     //Busqueda de elementos por posicion
-    it('EQ|First|Last Method', function(){
+    it('Metodos EQ|First|Last', function(){
         cy.get('input').first().type(username);
         cy.get('input').eq(1).type(password);
         cy.get('input').last().click();
@@ -32,7 +32,7 @@ describe('Locations in cypress', function(){
     });
 
     //Busqueda de elementos por input
-    it('Filter Method', function(){
+    it('Metodo Filter', function(){
         cy.get('input').filter('[type="text"]').type(username);
         cy.get('input').filter('[type="password"]').type(password);
         cy.get('input').filter('[type="submit"]').click();
@@ -42,7 +42,7 @@ describe('Locations in cypress', function(){
     });
 
     //Busqueda de elementos por nodos hijos
-    it('Find Method', function(){
+    it('Metodo Find', function(){
         cy.get('form').find('input').eq(0).type(username);
         cy.get('form').find('input').eq(1).type(password);
         cy.get('form').find('input').last().click();
@@ -52,14 +52,13 @@ describe('Locations in cypress', function(){
     });
 
     //Busqueda de elementos que cambien mucho
-    it('Parent Method', function(){
+    it('Metodo Parent', function(){
         cy.get('form').parent().should('have.class', 'login-box'); 
-        cy.get('form').parent().find('.input_error.form_input').type(username);
-
-        /*cy.get('form').find('input').eq(1).type(password);
-        cy.get('form').find('input').last().click();
+        cy.get('form').parent().find('.input_error.form_input').first().type(username);
+        cy.get('form').parent().find('.input_error.form_input').eq(1).type(password);
+        cy.get('form').parent().find('.submit-button.btn_action').last().click();
         cy.get('#react-burger-menu-btn').click();
-        cy.get('#logout_sidebar_link').click();*/
+        cy.get('#logout_sidebar_link').click();
 
     });
 
