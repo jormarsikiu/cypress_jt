@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Usuario Valido",
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "expected": "Products"
+    },
+    {
+        "name": "Usuario bloqueado",
+        "username": "locked_out_user",
+        "password": "secret_sauce",
+        "expected": "Epic sadface: Sorry, this user has been locked out."
+    },
+
+    {
+        "name": "Credenciales incorrectas",
+        "username": "dummy_user",
+        "password": "dummy_password",
+        "expected": "Epic sadface: Username and password do not match any user in this service"
+    }
+]
