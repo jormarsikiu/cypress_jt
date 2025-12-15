@@ -1,6 +1,7 @@
 ################ INSTALACION ###################
 1- Instalar node:  https://nodejs.org/es/download
 CDM Si esta instalado: npm -v 
+Actualmente 11.6.2
 
 2- Crear Carpetas 
 Cypress/EndtoEnd
